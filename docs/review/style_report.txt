@@ -1,0 +1,21 @@
+ОТЧЁТ СТАТИЧЕСКОЙ ПРОВЕРКИ — Demo27
+Дата: 25.11.2026
+
+Команда синтаксической проверки:
+python -m compileall -q app tests run.py
+
+Результат: SUCCESS (код возврата 0).
+
+Flake8:
+Не запускался в среде анализа. Пакет/исполняемый модуль flake8 не был установлен.
+Число нарушений Flake8 не заявляется.
+
+Pytest:
+Сбор тестов завершился ошибкой импорта:
+ModuleNotFoundError: No module named 'flask'
+Перед запуском установить зависимости:
+pip install -r requirements-dev.txt
+Затем:
+pytest -q
+
+Ручные замечания по структуре и стилю см. docs/review/style_report.md.
