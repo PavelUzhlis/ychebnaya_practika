@@ -158,3 +158,4 @@ def test_register_cannot_assign_admin_role(client):
         db.select(User).where(User.login == "attacker")
     ).scalar_one()
     assert created.role == "Пользователь"
+ 
